@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/menuicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_menu_white_24dp"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        android:layout_marginLeft="32px"
+        />
+    <ImageView
+        android:id="@+id/notificationicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_notifications_white_24dp"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        android:layout_marginRight="32px"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:src="@drawable/ic_banco_santander_logotipo"
+            android:layout_margin="8dp"
+            app:layout_constraintTop_toTopOf="@+id/toolbar"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            app:layout_constraintEnd_toEndOf="@+id/notificationicon"
+            app:layout_constraintStart_toStartOf="@+id/menuicon"
+             />
+        <ImageView
+            android:id="@+id/imgView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/redPrimary"
+            app:layout_constraintDimensionRatio="16:6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            />
+
+    <TextView
+        android:id="@+id/txtnameuser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Olá Marco Antônio!"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        <TextView
+            android:id="@+id/AgUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ag 2021"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/txtnameuser"
+            app:layout_constraintStart_toStartOf="@+id/txtnameuser"
+            />
+        <TextView
+            android:id="@+id/cc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CC 123456789"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintStart_toEndOf="@+id/AgUser"
+            app:layout_constraintTop_toTopOf="@+id/AgUser"
+            />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCard1"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cc">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/imgsvgpaid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_paid_black_24dp"
+                    android:layout_margin="16dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    />
+                <TextView
+                    android:id="@+id/txtsaldoDisponivel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:text="@string/saldo_disponivel"
+                    app:layout_constraintTop_toTopOf="@+id/imgsvgpaid"
+                    app:layout_constraintLeft_toRightOf="@+id/imgsvgpaid"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgsvgpaid"
+                    />
+
+                <ImageView
+                    android:id="@+id/less"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_expand_less_black_24dp"
+                    android:layout_margin="16dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/txtVsaldo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="R$ 931.578,00"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/imgsvgpaid"
+                    app:layout_constraintTop_toBottomOf="@+id/txtsaldoDisponivel" />
+                <TextView
+                    android:id="@+id/txtVsaldomorelimit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Saldo + Limite: "
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/txtVsaldo"
+                    app:layout_constraintStart_toStartOf="@+id/txtVsaldo"
+                    />
+
+                <TextView
+                    android:id="@+id/txtVsaldomorelimitValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="R$ 22.500,00"
+                    android:textColor="@color/black"
+                    app:layout_constraintLeft_toRightOf="@id/txtVsaldomorelimit"
+                    app:layout_constraintTop_toTopOf="@id/txtVsaldomorelimit" />
+
+                <View
+                    android:id="@+id/viewLineGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_margin="16dp"
+                    app:layout_constraintTop_toBottomOf="@+id/txtVsaldomorelimitValue"
+                    />
+                <TextView
+                    android:id="@+id/txtVerExtrato"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "@string/verextrato"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/redSecundary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/viewLineGray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcPagar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/materialCard1">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/imgVPagar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_credit_card_black_24dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/txpagar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    />
+                <TextView
+                    android:id="@+id/txpagar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pagar"
+                    app:layout_constraintTop_toBottomOf="@+id/imgVPagar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcTransferir"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            app:layout_constraintTop_toBottomOf="@id/materialCard1"
+            app:layout_constraintStart_toEndOf="@id/mcPagar"
+            app:layout_constraintEnd_toStartOf="@+id/mcRecarregar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/imgVTransferir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_payments_black_24dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/txTransferir"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    />
+                <TextView
+                    android:id="@+id/txTransferir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/transferir"
+                    app:layout_constraintTop_toBottomOf="@+id/imgVTransferir"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcRecarregar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            app:layout_constraintTop_toBottomOf="@id/materialCard1"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgVRecarregar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_smartphone_black_24dp"
+                    app:layout_constraintBottom_toTopOf="@+id/txRecarregar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txRecarregar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recarga"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgVRecarregar" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <ImageView
+            android:id="@+id/ivCartaoFinal"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_margin="16dp"
+            android:background="@color/redPrimary"
+            app:layout_constraintTop_toBottomOf="@+id/mcPagar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+        <TextView
+            android:id="@+id/txtcf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cartao_final"
+            android:layout_marginLeft="16dp"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toTopOf="@+id/ivCartaoFinal"
+            app:layout_constraintStart_toStartOf="@+id/ivCartaoFinal"
+            app:layout_constraintBottom_toBottomOf="@+id/ivCartaoFinal"
+            />
+        <TextView
+            android:id="@+id/txtcf2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2934"
+            android:textStyle="bold"
+            android:layout_marginLeft="16dp"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toTopOf="@+id/txtcf"
+            app:layout_constraintStart_toEndOf="@+id/txtcf"
+            app:layout_constraintBottom_toBottomOf="@+id/txtcf"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_expand_more_white_24dp"
+            android:layout_marginRight="8px"
+            app:layout_constraintTop_toTopOf="@+id/ivCartaoFinal"
+            app:layout_constraintRight_toRightOf="@+id/ivCartaoFinal"
+            app:layout_constraintBottom_toBottomOf="@+id/ivCartaoFinal"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

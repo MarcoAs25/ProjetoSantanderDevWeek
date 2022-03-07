@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ProjetoSantanderDevWeek</string>
+    <string name="saldo_disponivel">Saldo Disponível</string>
+    <string name="verextrato">Ver Extrato</string>
+    <string name="pagar">Pagar</string>
+    <string name="transferir">Transferir</string>
+    <string name="recarga">Recarga</string>
+    <string name="cartao_final">Cartão Final</string>
+</resources>
